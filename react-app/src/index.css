@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600&family=General+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'General Sans', system-ui, sans-serif;
+  color: #fff;
+  background: #05060f;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #05060f;
+  color: #fff;
+}
+
+.btn-pill {
+  @apply inline-flex items-center gap-2 rounded-full bg-white/10 px-5 py-2 text-sm font-semibold text-white transition hover:bg-white/20;
+}
+
+.btn-primary {
+  @apply inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white shadow-glow transition hover:-translate-y-0.5 hover:shadow-glow;
+}
+
+.section {
+  @apply py-16 md:py-24;
+}
+
+.card {
+  @apply rounded-3xl border border-white/5 bg-white/5 p-6 shadow-soft backdrop-blur;
+}
+
+.badge {
+  @apply inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-white/70;
+}
+
+@layer utilities {
+  .shadow-glow {
+    box-shadow: 0 15px 50px rgba(95, 91, 255, 0.35);
+  }
+}
+
+.glass {
+  @apply rounded-3xl border border-white/5 bg-white/5 backdrop-blur;
+}
